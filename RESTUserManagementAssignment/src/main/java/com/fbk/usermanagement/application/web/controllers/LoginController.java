@@ -7,11 +7,13 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.fbk.usermanagement.application.rest.dtos.LoginObject;
 import com.fbk.usermanagement.application.services.impl.UserService;
 import com.fbk.usermanagement.application.viewobjects.User;
 
@@ -41,10 +43,14 @@ public class LoginController {
 	@RequestMapping(value = "/loginPage", method = RequestMethod.GET)
 	public ModelAndView loginPage(HttpServletRequest request,
 	        @RequestParam(value = "error", required = false) String error,
-	        @RequestParam(value = "logout", required = false) String logout) {
+	        @RequestParam(value = "logout", required = false) String logout, @ModelAttribute LoginObject loginObject) {
 
 		ModelAndView model = new ModelAndView();
 
+		// Validating the login with REST API
+		if (loginObject.getEmail() != null && loginObject.getPassword() != null) {
+			userService.validateLogin(loginObject.getEmail(), loginObject.getPassword());
+		}
 		if (error != null) {
 			model.addObject("error", "Invalid Credentials provided.");
 		}

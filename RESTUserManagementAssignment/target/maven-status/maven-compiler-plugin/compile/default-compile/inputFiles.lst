@@ -8,7 +8,6 @@
 /Users/snidamanuri/Workspaces/currentBranchWorkSpace/RESTUserManagementAssignment/src/main/java/com/fbk/usermanagement/application/rest/dtos/GetUserResponse.java
 /Users/snidamanuri/Workspaces/currentBranchWorkSpace/RESTUserManagementAssignment/src/main/java/com/fbk/usermanagement/application/rest/constants/EmpRestURIConstants.java
 /Users/snidamanuri/Workspaces/currentBranchWorkSpace/RESTUserManagementAssignment/src/main/java/com/fbk/usermanagement/application/rest/services/WebClient.java
-/Users/snidamanuri/Workspaces/currentBranchWorkSpace/RESTUserManagementAssignment/src/main/java/com/fbk/usermanagement/application/rest/services/temp/RestService.java
 /Users/snidamanuri/Workspaces/currentBranchWorkSpace/RESTUserManagementAssignment/src/main/java/com/fbk/usermanagement/application/config/LoginApplicationConfig.java
 /Users/snidamanuri/Workspaces/currentBranchWorkSpace/RESTUserManagementAssignment/src/main/java/com/fbk/usermanagement/application/services/UserManager.java
 /Users/snidamanuri/Workspaces/currentBranchWorkSpace/RESTUserManagementAssignment/src/main/java/com/fbk/usermanagement/application/rest/dtos/UserObject.java

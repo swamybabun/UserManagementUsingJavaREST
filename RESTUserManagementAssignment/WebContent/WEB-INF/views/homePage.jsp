@@ -40,7 +40,8 @@
 			<thead>
 				<tr align="center">
 					<th>Id</th>
-					<th>Name</th>
+					<th>Name (FirstName & LastName)</th>
+					<th>Job</th>
 					<th colspan="2"></th>
 				</tr>
 			</thead>
@@ -49,6 +50,7 @@
 					<tr align="center">
 						<td><c:out value="${user.id}" /></td>
 						<td><c:out value="${user.name}" /></td>
+						<td><c:out value="${user.job}" /></td>
 						<td><c:url var="editUrl" value="/user/edit?id=${user.id}" /><a
 							id="update" href="${editUrl}" class="btn btn-warning">Update</a>
 						</td>

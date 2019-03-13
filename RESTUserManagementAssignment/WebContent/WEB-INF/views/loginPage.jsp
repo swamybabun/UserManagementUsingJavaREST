@@ -7,7 +7,7 @@
 	<c:if test="${not empty error}"><div align="center">${error}</div></c:if>
 	<c:if test="${not empty message}"><div align="center" >${message}</div></c:if>
 
-	<form name='login' action="<c:url value='/loginPage' />" method='POST'>
+	<form name='login' action="<c:url value='/loginPage' />" method='POST' modelAttribute="loginObject">
 		<table align="center">
 			<tr>
 				<td>UserName:</td>

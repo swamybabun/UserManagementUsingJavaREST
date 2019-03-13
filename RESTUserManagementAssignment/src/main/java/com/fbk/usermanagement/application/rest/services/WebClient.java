@@ -40,16 +40,13 @@ public class WebClient {
 
 	public boolean validateLogin(LoginObject loginObject) {
 		WebTarget webTarget = client.target(EmpRestURIConstants.BASE_URL).path(EmpRestURIConstants.USER_LOGIN);
-
-		int requestResult = webTarget.request()
-		        .accept(MediaType.APPLICATION_JSON_VALUE)
-		        .buildPost(Entity.entity(loginObject, javax.ws.rs.core.MediaType.APPLICATION_JSON))
-		        .invoke()
+		int ressponseStatus = webTarget.request(MediaType.APPLICATION_JSON_VALUE)
+		        .post(Entity.entity(loginObject, MediaType.APPLICATION_JSON_VALUE))
 		        .getStatus();
 
-		log.debug("the response of validate login is " + requestResult);
+		log.debug("the response of validate login is " + ressponseStatus);
 
-		if (requestResult == 200) {
+		if (ressponseStatus == 200) {
 			return true;
 		} else {
 			return false;
@@ -57,8 +54,11 @@ public class WebClient {
 	}
 
 	public List<User> getUsers() {
-		Response response =
-		        client.target(EmpRestURIConstants.BASE_URL).path(EmpRestURIConstants.GET_ALL_USERS).request().get();
+		Response response = client.target(EmpRestURIConstants.BASE_URL)
+		        .path(EmpRestURIConstants.GET_ALL_USERS)
+		        .queryParam("per_page", 20)
+		        .request()
+		        .get();
 		UsersResponse users = response.readEntity(UsersResponse.class);
 		List<UserObject> data = users.getUsers();
 

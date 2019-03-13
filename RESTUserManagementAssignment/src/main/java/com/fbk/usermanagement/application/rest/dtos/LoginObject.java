@@ -1,3 +1,4 @@
+
 package com.fbk.usermanagement.application.rest.dtos;
 
 import java.io.Serializable;
@@ -9,6 +10,10 @@ public class LoginObject implements Serializable {
 	private String email;
 
 	private String password;
+
+	public LoginObject() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public LoginObject(String email, String password) {
 		super();
@@ -31,5 +36,4 @@ public class LoginObject implements Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
 }

@@ -1,7 +1,6 @@
 com/fbk/usermanagement/application/rest/dtos/GetUserResponse.class
 com/fbk/usermanagement/application/config/LoginSecurityConfig.class
 com/fbk/usermanagement/application/rest/dtos/CreateUserObject.class
-com/fbk/usermanagement/application/rest/services/temp/RestService.class
 com/fbk/usermanagement/application/config/LoginApplicationConfig.class
 com/fbk/usermanagement/application/rest/services/WebClient.class
 com/fbk/usermanagement/application/config/core/SpringMVCWebAppInitializer.class
@@ -9,10 +8,8 @@ com/fbk/usermanagement/application/services/UserManager.class
 com/fbk/usermanagement/application/web/controllers/UserController.class
 com/fbk/usermanagement/application/rest/constants/EmpRestURIConstants.class
 com/fbk/usermanagement/application/rest/dtos/UserObject.class
-com/fbk/usermanagement/application/rest/services/temp/RestService$1.class
 com/fbk/usermanagement/application/web/controllers/LoginController.class
 com/fbk/usermanagement/application/services/impl/UserService.class
-com/fbk/usermanagement/application/rest/services/temp/RestService$2.class
 com/fbk/usermanagement/application/rest/dtos/LoginObject.class
 com/fbk/usermanagement/application/config/core/SpringSecurityInitializer.class
 com/fbk/usermanagement/application/viewobjects/User.class
